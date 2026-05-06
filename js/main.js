@@ -61,7 +61,7 @@ function setEG(state) {
   });
 
   // Stagger groups
-  document.querySelectorAll('.feat__grid, .res, .stats__grid, .form__reasons, .ticker__track, .testi__grid').forEach(function (g) {
+  document.querySelectorAll('.feat__grid, .res, .stats__grid, .form__reasons, .ticker__track, .testi__grid, .faq__list').forEach(function (g) {
     g.classList.add('stagger');
   });
 
