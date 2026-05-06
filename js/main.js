@@ -53,7 +53,7 @@ function setEG(state) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   // Auto-tag elements with reveal classes
-  var revealSel = '.sec__head, .feat__hero, .feat__demo, .feat__card, .aud__row, .proc__phase, .proc__i, .ba__c, .res__i, .cta__inner > *, .form__col, .form__box, .stats__i, .ticker';
+  var revealSel = '.sec__head, .feat__hero, .feat__demo, .feat__card, .aud__row, .proc__phase, .proc__i, .ba__c, .res__i, .cta__inner > *, .form__col, .form__box, .stats__i, .ticker, .testi__card';
   document.querySelectorAll(revealSel).forEach(function (el) {
     if (!el.classList.contains('reveal') && !el.classList.contains('reveal-l') && !el.classList.contains('reveal-r') && !el.classList.contains('reveal-scale')) {
       el.classList.add('reveal');
@@ -61,7 +61,7 @@ function setEG(state) {
   });
 
   // Stagger groups
-  document.querySelectorAll('.feat__grid, .res, .stats__grid, .form__reasons, .ticker__track').forEach(function (g) {
+  document.querySelectorAll('.feat__grid, .res, .stats__grid, .form__reasons, .ticker__track, .testi__grid').forEach(function (g) {
     g.classList.add('stagger');
   });
 

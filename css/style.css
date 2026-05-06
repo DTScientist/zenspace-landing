@@ -1024,7 +1024,7 @@ footer { background: var(--navy-dark); color: #fff; padding: 80px 0 32px; }
   .stagger.in > *:nth-child(7) { transition-delay: .53s; }
 
   /* Hero entrance */
-  .hero__chip, .hero__h, .hero__sub, .hero__cta, .hero__split {
+  .hero__chip, .hero__h, .hero__sub, .hero__cta, .hero__pod, .hero__split {
     opacity: 0;
     transform: translateY(18px);
     animation: heroIn .9s var(--ease) forwards;
@@ -1032,7 +1032,8 @@ footer { background: var(--navy-dark); color: #fff; padding: 80px 0 32px; }
   .hero__h { animation-delay: .12s; }
   .hero__sub { animation-delay: .24s; }
   .hero__cta { animation-delay: .34s; }
-  .hero__split { animation-delay: .5s; transform: translateY(0); opacity: 0; animation-name: heroFade; }
+  .hero__pod { animation-delay: .44s; }
+  .hero__split { animation-delay: .58s; transform: translateY(0); opacity: 0; animation-name: heroFade; }
   @keyframes heroIn { to { opacity: 1; transform: none; } }
   @keyframes heroFade { to { opacity: 1; } }
 
@@ -1173,4 +1174,121 @@ footer { background: var(--navy-dark); color: #fff; padding: 80px 0 32px; }
   .foot { grid-template-columns: 1fr; }
   .foot__bot { flex-direction: column; gap: 8px; }
   .form__box { padding: 28px; }
+}
+
+/* ---------- HERO POD ILLUSTRATION ---------- */
+.hero__pod {
+  max-width: 480px;
+  width: 92%;
+  margin: 48px auto 0;
+}
+.hero__pod svg { width: 100%; height: auto; display: block; }
+
+/* ---------- FEATURE CARD ICONS ---------- */
+.feat__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--navy);
+  margin-bottom: 20px;
+  opacity: .75;
+  transition: color var(--t) var(--ease), opacity var(--t) var(--ease);
+}
+.feat__card:hover .feat__icon { color: var(--blue); opacity: 1; }
+.feat__icon svg { width: 100%; height: 100%; }
+
+/* ---------- STATS CONTEXT ---------- */
+.stats__ctx {
+  font-size: 12px;
+  color: var(--gray-dk);
+  line-height: 1.45;
+  margin-top: 8px;
+  max-width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: .7;
+}
+
+/* ---------- PROCESS STEP ICONS ---------- */
+.proc__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--blue);
+  margin-bottom: 10px;
+  opacity: .8;
+}
+.proc__icon svg { width: 100%; height: 100%; }
+.proc__i.in .proc__icon { opacity: 1; }
+
+/* ---------- TESTIMONIALS ---------- */
+.testi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testi__card {
+  background: #fff;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  padding: 44px 36px 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  transition: all var(--t) var(--ease);
+}
+.testi__card:hover {
+  border-color: var(--navy);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(13, 30, 69, .08);
+}
+.testi__mark {
+  position: absolute;
+  top: 24px;
+  left: 36px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--blue);
+  opacity: .18;
+  user-select: none;
+  pointer-events: none;
+}
+.testi__q {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--navy-dark);
+  font-style: italic;
+  padding-top: 24px;
+  flex: 1;
+}
+.testi__attr {
+  border-top: 1px solid var(--gray);
+  padding-top: 20px;
+}
+.testi__role-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--off);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.testi__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-dark);
+  margin-bottom: 2px;
+}
+.testi__company { font-size: 13px; color: var(--gray-dk); }
+
+@media (max-width: 1024px) {
+  .testi__grid { grid-template-columns: 1fr; }
+  .hero__pod { max-width: 360px; margin-top: 40px; }
 }
