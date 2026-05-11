@@ -1,0 +1,27 @@
+# Local image assets (served from Vercel Blob Storage)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+
+# Archive / iteration files
+landing-a.html
+landing-b.html
+landing-c.html
+landing-d.html
+landing-perfect.html
+landing-v1.html
+landing-v2.html
+landing-v3.html
+landing-v4.html
+landing-v1-hero.html
+landing-v2-features.html
+landing-v3-trust.html
+live-source.html
+website-home.html
+
+# Dev
+launch.json
+settings.local.json
+.claude/
